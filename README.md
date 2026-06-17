@@ -1,72 +1,114 @@
-[Facebook Page Details](https://apify.com/iron-crawler/facebook-page-details?fpr=data)
+[Facebook Page Details](https://apify.com/data-slayer/facebook-page-details?fpr=data)
 
-"# Facebook Page Details Scraper (Cookieless)
+Extract comprehensive Facebook page data without logging in or managing cookies. This cookieless scraper enables sales intelligence teams to build rich lead databases by capturing verified business information, follower counts, contact details, and more from public Facebook pages.
 
-## What does Facebook Page Details Scraper (Cookieless) do?
+## 📺 Video Tutorial: How it Works
 
-This tool extracts comprehensive page information from Facebook pages without requiring any login credentials or cookies. Built with a cookieless architecture, it allows sales intelligence professionals, marketers, and researchers to gather public Facebook page data efficiently and at scale. You can access page details, engagement metrics, and profile information without authentication barriers, making it ideal for building lead databases and competitive intelligence workflows.
-
-**Key Features:**
-
-- Extract page details without Facebook login or cookies
-- Scrape page names, descriptions, categories, and verification status
-- Capture follower counts, likes, and engagement metrics
-- Export data to JSON, CSV, or Excel formats
-- Process multiple pages in a single run
-- Access public page information compliantly
-
-## Why scrape Facebook page data?
-
-Sales intelligence professionals need detailed page information to build comprehensive lead databases and accelerate B2B prospecting efforts. Facebook pages contain valuable business signals including company size indicators, industry categories, contact information, and engagement levels that help qualify leads and prioritize outreach. This data transforms social profiles into actionable sales intelligence.
-
-**Primary Use Cases:**
-
-- **Lead Generation:** Build targeted prospect lists by extracting business pages matching your ideal customer profile, including industry, location, and follower count criteria
-- **Market Research:** Analyze competitor pages, track brand presence across regions, and identify emerging players in your target markets
-- **Sales Enrichment:** Enhance existing CRM records with social proof metrics, engagement data, and updated business information from Facebook pages
-
-## How to scrape Facebook using this tool?
-
-**Step 1:** Locate the Facebook page URL you want to scrape. Navigate to the target page and copy the full URL from your browser (e.g., [https://www.facebook.com/facebook](https://www.facebook.com/facebook)).
-
-**Step 2:** Configure your input parameters by pasting the page URL into the `pageUrl` field. You can process multiple pages by adding additional URLs. **1 page ≈ 1 Facebook page profile** with all available public details.
-
-**Step 3:** Run the scraper and wait for extraction to complete. Once finished, download your data in JSON, CSV, or Excel format directly from the Apify platform.
-
-## What are the input parameters?
-
-| Field | Type | Description |
-| --- | --- | --- |
-| `pageUrl` | String (URL) | The full Facebook page URL you want to scrape (e.g., [https://www.facebook.com/facebook](https://www.facebook.com/facebook)). Accepts standard Facebook page URLs. |
-
-## What data can you extract?
-
-You can download the following data in JSON, CSV, or Excel formats:
-
-```
-{
-  ""page_url"": ""https://www.facebook.com/apify"",
-  ""title"": ""Apify - Web Scraping and Automation Platform"",
-  ""meta_description"": ""Apify is a platform that enables developers to build, run, and share web scraping and automation tools. Extract data from any website."",
-  ""last_modified"": ""2025-12-17T14:22:18Z"",
-  ""word_count"": 2341,
-  ""author"": ""Apify Team"",
-  ""read_time_minutes"": 12,
-  ""social_shares"": 1847
-}
-```
-
-**Extracted Fields:**
-
-- `page_url`: The complete Facebook page URL
-- `title`: Page name and headline
-- `meta_description`: Page description and about section
-- `last_modified`: Timestamp of last page update
-- `word_count`: Total word count from page content
-- `author`: Page administrator or author information
-- `read_time_minutes`: Estimated reading time for page content
-- `social_shares`: Total engagement and share count
+[Video](https://www.youtube.com/embed/9M87r2AInGs?enablejsapi=1&rel=0)
 
 ---
 
-This web scraping tool serves as a powerful data extraction tool for professionals who need to export website data from Facebook at scale. Whether you're building a product data scraper workflow, conducting lead generation scraping, or creating a price data scraper for competitive analysis, this web scraper delivers reliable Facebook page intelligence without authentication complexity."
+## Key Features
+
+🔒 **Cookieless / No Login Required** - Access public Facebook page data without authentication, eliminating account management overhead and reducing the risk of blocks or restrictions.
+
+📈 **Scalable Architecture** - Process multiple page URLs efficiently to build comprehensive lead databases at scale for B2B prospecting campaigns.
+
+✅ **Rich Profile Data** - Capture essential business intelligence including page names, follower counts, verification status, categories, contact information (phone, email, website), addresses, ratings, and profile images.
+
+⚡ **Fast & Reliable** - Optimized extraction engine delivers consistent results with minimal latency, ensuring your prospecting workflows stay on schedule.
+
+📊 **Export-Ready Formats** - Download data in JSON, CSV, or Excel formats for immediate integration with CRM systems, marketing automation platforms, and analytics tools.
+
+## Use Cases
+
+**Sales Intelligence Professionals**: Build targeted B2B lead lists by extracting verified business pages with contact details, follower metrics, and category classifications to prioritize high-value prospects.
+
+**Market Research Analysts**: Gather competitive intelligence by analyzing page categories, follower growth patterns, verification status, and business information across industry segments.
+
+**Marketing Teams**: Enrich existing customer databases with social proof metrics, website URLs, and business classifications to personalize outreach campaigns and improve conversion rates.
+
+## Inputs
+
+| Field | Type | Description |
+| --- | --- | --- |
+| pageUrl | String | The full Facebook page URL to scrape (e.g., [https://www.facebook.com/facebook](https://www.facebook.com/facebook)) |
+
+## Outputs
+
+**Formats**: JSON, CSV, Excel
+
+**Fields**: Each extracted page record includes:
+
+- `name` - Page display name
+- `page_id` - Unique Facebook page identifier
+- `url` - Full page URL
+- `followers` - Total follower count
+- `verified` - Verification status (true/false)
+- `categories` - Business category classifications
+- `website` - Associated website URL
+- `phone` - Contact phone number
+- `email` - Contact email address
+- `address` - Physical business address
+- `rating` - Page rating score
+- `image` - Profile image URL
+- `cover_image` - Cover photo URL
+- `intro` - Page introduction text
+- `services` - Listed services
+- `price_range` - Price range indicator
+- `other_accounts` - Connected social accounts
+- `delegate_page` - Delegate page information
+
+## How to Use
+
+**Step 1**: Enter the target Facebook page URL in the `pageUrl` field (e.g., [https://www.facebook.com/yourcompany](https://www.facebook.com/yourcompany)).
+
+**Step 2**: Click "Start" to begin the extraction process.
+
+**Step 3**: Once complete, download your data in JSON, CSV, or Excel format and import directly into your CRM or analytics platform.
+
+## Sample Output
+
+```
+{
+  "name": "TechCorp Solutions",
+  "type": "page",
+  "page_id": "100012345678901",
+  "url": "https://www.facebook.com/techcorpsolutions",
+  "image": "https://scontent.example.com/profile.jpg",
+  "followers": 45000,
+  "categories": [
+    "Software Company",
+    "Technology Company"
+  ],
+  "phone": "+1-555-0123",
+  "email": "contact@techcorp.com",
+  "address": "123 Innovation Drive, San Francisco, CA 94105",
+  "website": "https://www.techcorp.com",
+  "verified": true,
+  "rating": 4.7,
+  "cover_image": "https://scontent.example.com/cover.jpg"
+}
+```
+
+## 🧩 Other Facebook Actors by Data Slayer
+
+| Actor | What it does | Link |
+| --- | --- | --- |
+| Facebook Reviews Scraper | Extract customer reviews from any Facebook page | [Try it](https://apify.com/data-slayer/facebook-page-reviews) |
+| Facebook Posts Scraper | Extract posts from any Facebook page | [Try it](https://apify.com/data-slayer/facebook-page-posts) |
+| Facebook Group Posts Scraper | Extract posts from any public Facebook group | [Try it](https://apify.com/data-slayer/facebook-group-posts) |
+| Facebook Page Search Scraper | Search and discover Facebook pages by keyword | [Try it](https://apify.com/data-slayer/facebook-search-pages) |
+| Facebook People Search Scraper | Search and find Facebook profiles by keyword | [Try it](https://apify.com/data-slayer/facebook-search-people) |
+| Facebook Events Scraper | Discover Facebook events by keyword search | [Try it](https://apify.com/data-slayer/facebook-search-events) |
+| Facebook Marketplace Listing Scraper | Extract detailed listing data from Facebook Marketplace | [Try it](https://apify.com/data-slayer/facebook-marketplace-details) |
+
+**Powerful workflow:** Use [Facebook Page Search Scraper](https://apify.com/data-slayer/facebook-search-pages) to discover pages by keyword → feed those page URLs into this actor to get full business profiles with contact details.
+
+## 💬 Feedback and Support
+
+We actively maintain this actor and ship improvements based on user feedback. If you run into any issues or have ideas for new features:
+
+- Create an issue on the Actor's **Issues tab** in Apify Console
+- Rate the actor if it helped you — it helps others find it too
+We typically respond within 24 hours.
